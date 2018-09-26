@@ -21,10 +21,10 @@ keystone.init({
 	'view engine': '.hbs',
 
 	'custom engine': handlebars.create({
-		layoutsDir: 'templates/views/layouts',
-		partialsDir: 'templates/views/partials',
+		layoutsDir: __dirname + '/templates/views/layouts',
+		partialsDir: __dirname +  '/templates/views/partials',
 		defaultLayout: 'default',
-		helpers: new require('./templates/views/helpers')(),
+		helpers: new require( __dirname + '/templates/views/helpers')(),
 		extname: '.hbs',
 	}).engine,
 
@@ -52,7 +52,7 @@ keystone.set('locals', {
 });
 
 // Load your project's Routes
-keystone.set('routes', require('./routes'));
+keystone.set('routes', require(__dirname + '/routes'));
 
 
 // Configure the navigation bar in Keystone's Admin UI
