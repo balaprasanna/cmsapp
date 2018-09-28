@@ -32,7 +32,7 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-//	'mongo': 'mongodb://localhost:27017/appdb'
+	'mongo': 'mongodb://bala12:bala12@ds045521.mlab.com:45521/balanus'
 });
 
 // If you want to customize your mongodb config, please add this to the keystore.init config above
